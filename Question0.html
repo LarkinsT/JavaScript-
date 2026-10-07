@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Question 1</title>
+</head>
+<body>
+    <input type = "number" id = "num1" value = "5">
+    <input type = "number" id = "num2" value = "9">
+    <button onclick = "addnumbers()">Add</button>
+    <p id = "result"></p>
+    <script>
+        function addnumbers() {
+            let c = document.getElementById("num1").value;
+            let d = document.getElementById("num2").value;
+            //document.write("The value of c and d is: " + String(c+d) +"<br>");
+            document.getElementById("result").innerHTML = "The value of c+d is: " + String(Number(c) + Number(d))
+        }
+    </script>
+</body>
+</html>
