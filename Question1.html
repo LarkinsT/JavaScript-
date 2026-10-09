@@ -4,11 +4,11 @@
 </head>
 <body>
     <button onclick = "rolldice()">Roll</button>
-    <p id = "dice"></p>
+    <p id = "dice" style = "white-space: pre; font-family: monospace;"></p>
     <script>
         function rolldice() {
-       let dice1 = "ooooooooooooo"<br>"o           o"<br>"o           o"<br>"o           o"<br>"o           o"<br>"o           o"<br>"oooooooooooo";
-        document.getElementById("dice").innerHTML = String(dice1);
+       let dice1 = "oooooooooooooo<br>o            o<br>o    X   X   o<br>o      X     o<br>o    X   X   o<br>o            o<br>oooooooooooooo";
+        document.getElementById("dice").innerHTML = dice1;
         }
     </script>
 
