@@ -3,11 +3,13 @@
 <title>Question 1</title>
 </head>
 <body>
-        <p id = "dice"></p>
+    <button onclick = "rolldice()">Roll</button>
+    <p id = "dice"></p>
     <script>
+        function rolldice() {
        let dice1 = "ooooooooooooo"<br>"o           o"<br>"o           o"<br>"o           o"<br>"o           o"<br>"o           o"<br>"oooooooooooo";
-        document.getElementById("dice").innerHTML = dice1;
-
+        document.getElementById("dice").innerHTML = String(dice1);
+        }
     </script>
 
 </body>
