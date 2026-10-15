@@ -10,12 +10,19 @@
     <p id = "result"></p>
     <script>
         function calculate() {
+            alert("cheese")
             let balance = document.getElementById("balance").value;
             let interest = document.getElementById("interest").value;
             let reach = document.getElementById("reach").value;
-            let total = Number(balance) * (1 + (Number(interest)/100)) ** Number(reach);
-            document.getElementById("result").innerHTML = "The value is: " + String(total)
+            let years = 0;
+            document.write("£" + String(balance) + " starting balance - " + String(interest) + "% interest rate<br>");
+            while (balance < reach){
+                balance = Number(balance) + (Number(balance) * Number(interest)/100);
+                years += 1;
+                document.write("Year " + String(years) + ": £" + String(balance) + "<br>");
+            }
+            document.getElementById("result").innerHTML = "It will take " + String(years) + " years to reach the balance you want.";
         }
-`   </script>
+    </script>
 </body>
 </html>

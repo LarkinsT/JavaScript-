@@ -1,0 +1,15 @@
+<html>
+<head>
+    <title>Question 6</title>
+    <p id = "result"></p>
+    <button onclick = "random()">Randomize</button>
+    <script>
+        function random() {
+            let list = ["one", "two", "three", "four", "five", "six"];
+            let num = (Math.floor(Math.random() * 6) + 1);
+            document.getElementById("result").innerHTML = list[num - 1];
+        }
+    </script>
+</head>
+<body>
+</html>
