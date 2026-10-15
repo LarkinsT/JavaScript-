@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Question 5</title>
+</head>
+<body>
+    <input id = "balance" type = "number" value = "0">
+    <input id = "interest" type = "number" value = "0">
+    <input id = "reach" type = "number" value = "0">
+    <button onclick = "calculate()">Calculate</button>
+    <p id = "result"></p>
+    <script>
+        function calculate() {
+            let balance = document.getElementById("balance").value;
+            let interest = document.getElementById("interest").value;
+            let reach = document.getElementById("reach").value;
+            let total = Number(balance) * (1 + (Number(interest)/100)) ** Number(reach);
+            document.getElementById("result").innerHTML = "The value is: " + String(total)
+        }
+`   </script>
+</body>
+</html>
