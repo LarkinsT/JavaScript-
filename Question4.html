@@ -1,0 +1,24 @@
+<html>
+<head>
+   <title>Question 4</title> 
+</head>
+<body>
+<input id = "numb" type = "number" value = 3>
+<button onclick = "average()">Average Number</button>
+<p id = "average"></p>
+  
+<script>
+    function average() {
+        let total = 0;
+        let num = document.getElementById("numb").value;
+        for (let i = 0; i <  num ; i++){
+            let value = prompt("Please enter a number");
+            total += Number(value);
+        } 
+        final = total / num;
+        document.getElementById("average").innerHTML = Number(final)
+    }
+
+</script>
+</body>
+</html>

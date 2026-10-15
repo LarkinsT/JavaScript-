@@ -9,34 +9,48 @@
     <input id = "evaluation" type = "number" value = "0">
     <button onclick = "grade()">Calculate Grade</button>
     <p id = "grade"></p>
+    <p id = "boundary"></p> 
     <script>
         function grade() {
         let a = document.getElementById("analysis").value;
         let d = document.getElementById("design").value;
         let i = document.getElementById("implementation").value;
         let e = document.getElementById("evaluation").value;
-        let total = a + d + i + e
+        let total = Number(a) + Number(d) + Number(i) + Number(e);
         let score;
-        if (total > 80);{ score = "Your total score is " + String(total) + " out of 100. Your grade is an A*"
-        } elseif (total > 67);{
-            score = ("Your total score is " + String(total) + " out of 100. Your grade is an A")
-        } elseif (total > 54); and (total < 67);{
-            score =  ("Your total score is " + String(total) + " out of 100. Your grade is an B")
-        }elseif (total > 41); and (total < 54);{
-            score =  ("Your total score is " + String(total) + " out of 100. Your grade is an C")
-        }elseif (total > 31); and (total < 41);{
-            score =  ("Your total score is " + String(total) + " out of 100. Your grade is an D")
-        }elseif (total > 22); and (total < 31);{
-            score =  ("Your total score is " + String(total) + " out of 100. Your grade is an E")
-        } else if (total > 13) and (total < 22);{
-            score =  ("Your total score is " + String(total) + " out of 100. Your grade is an F")
-        }elseif (total > 4); and (total < 13);{
-            score =  ("Your total score is " + String(total) + " out of 100. Your grade is an G")
-        }elseif (total > 0); and (total < 4);{
-            score = ("Your total score is " + String(total) + " out of 100. Your grade is an U")
-        }
-        document.getElementById("grade").innerHTML = score
+        let nextgrade = 0;
+        alert(nextgrade)
+        if (total > 80){ 
+            score = "Your total score is " + String(total) + " out of 100. Your grade is an A*";
+        } else if (total > 67){
+            score = ("Your total score is " + String(total) + " out of 100. Your grade is an A");
+            nextgrade = 80 - Number(total);
+        } else if (total > 54){ 
+            score =  "Your total score is " + String(total) + " out of 100. Your grade is an B";
+            nextgrade = 67 - Number(total);
+         }else if (total > 41 && total < 54){
+            score =  ("Your total score is " + String(total) + " out of 100. Your grade is an C");
+            nextgrade = 54 - Number(total);
+        }else if (total > 31 && total < 41){
+            score =  ("Your total score is " + String(total) + " out of 100. Your grade is an D");
+            nextgrade = 41 - Number(total);
+        }else if (total > 22 && total < 31){
+            score =  ("Your total score is " + String(total) + " out of 100. Your grade is an E");
+            nextgrade = 31 - Number(total);
+        } else if (total > 13 && total < 22){
+            score =  ("Your total score is " + String(total) + " out of 100. Your grade is an F");
+            nextgrade = 22 - Number(total);
+        }else if (total > 4 && total < 13){
+            score =  ("Your total score is " + String(total) + " out of 100. Your grade is an G");
+            nextgrade = 13 - Number(total);
+        }else if (total > 0 && total < 4){
+            score = ("Your total score is " + String(total) + " out of 100. Your grade is an U");
+            nextgrade = 4 - total;
+        } 
+        alert(nextgrade);
 
+        document.getElementById("grade").innerHTML = score;
+        document.getElementById("boundary").innerHTML = ("The next grade boundary is " + String(nextgrade) + " marks above you score.")
 
         }
     </script>
